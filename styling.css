@@ -1,0 +1,302 @@
+/* ========================================================================= */
+/* RESET */
+/* ========================================================================= */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+html, body {
+    background-color: #fff;
+}
+
+
+/* ========================================================================= */
+/* BASIC ELEMENTS */
+/* ========================================================================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+pre {
+    font-family: 'Noto Serif', serif;
+    color: #000;
+}
+
+p {
+    font-family: 'Source Sans Pro', serif;
+    color: #4e4e4e;
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    font-family: 'Source Sans Pro', serif;
+    color: #000;
+}
+
+ul, ol, li, dl, dt, dd {
+    font-family: 'Source Sans Pro', serif;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+table, tr, td {
+    font-family: 'Source Sans Pro', serif;
+    color: #000;
+}
+
+td a {
+    color: inherit;
+}
+
+dl {
+    border-left: 2px solid #ccc;
+    padding-left: 8px;
+    margin-left: 12px;
+    display: grid;
+}
+dd {
+    margin-left: 8px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #242424;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #242424;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 100;
+    color: #242424;
+}
+
+
+/* ========================================================================= */
+/* TOP HEADER CONTENT */
+/* ========================================================================= */
+body > header > h1, body > header > h2 {
+    text-align: center;
+}
+
+body > header > h1 {
+    font-weight: 700;
+}
+
+body > header > h2 {
+    font-weight: 700;
+    color: #525252;
+}
+
+body > header > h2 * {
+    color: #525252;
+}
+
+
+/* ========================================================================= */
+/* MAIN ELEMENT */
+/* ========================================================================= */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    row-gap: 20px;
+}
+
+main > h1 {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+main > article[two-cols] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+}
+
+main > article[two-cols] > div[column] {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+main > article[two-cols] > div[column] > h2 {
+    /* border-bottom: 1px solid #d7d7d7; */
+}
+
+main > article[two-cols] > div[column] > section {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #e1e1e1;
+    margin-left: 8px;
+    padding-left: 8px;
+    row-gap: 8px;
+}
+
+main > article[two-cols] > div[column] > section > h2[title] {
+    /* text-align: center; */
+}
+
+main > article[two-cols] > div[column] > section > h2 a {
+    color: inherit;
+    /* text-decoration: none; */
+}
+
+main > article[two-cols] > div[column] > section > h3[subtitle] {
+
+}
+
+main > article[two-cols] > div[column] > section > div[tags] {
+    display: flex;
+    column-gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > article[two-cols] > div[column] > section > div[tags] > span[label] {
+    
+}
+
+main > article[two-cols] > div[column] > section > p {
+    /* padding: 8px; */
+}
+
+
+
+/* ========================================================================= */
+/* MISCELLANEOUS */
+/* ========================================================================= */
+
+span[label] {
+    font-family: 'Source Sans Pro', serif;
+    color: #303030;
+    border-radius: 3px;
+    padding: 0px 4px;
+    font-size: 0.8em;
+    font-weight: 300;
+    border: 1px solid #e8e8e8;
+}
+
+div[rows] {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+div[box-type] {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 0.1em solid #666;
+    margin-bottom: -1px;
+}
+div[box-type=very-skilled] {
+    background-color: red;
+}
+div[box-type=productive-experienced] {
+    background-color: #1cdf2c9f;
+}
+div[box-type=still-productive] {
+    background-color: #408dbb8f;
+}
+div[box-type=formerly-productive] {
+    background-color: #dce91061;
+}
+div[box-type=curious] {
+    background-color: #bf7e1d63;
+}
+div[box-type=just-productive] {
+    background-color: #3a3a3a63;
+}
+div[box-type=unnecessary] {
+    background-color: #fff;
+}
+
+div[key] {
+    display: flex;
+    flex-direction: revert;
+    column-gap: 12px;
+    justify-content: center;
+    color: #666;
+}
+div[row] {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+div[tags][large] {
+    display: flex;
+    column-gap: 12px;
+    flex-direction: row;
+    justify-content: unset !important;
+}
+div[bi-label] {
+    font-family: 'Source Sans Pro', serif;
+    color: #303030;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: 300;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    width: max-content;
+    border: 1px solid #e8e8e8;
+    /* border: 1px solid #ffffff; */
+    padding: 2px;
+}
+
+div[bi-label] > span {
+    padding: 0px 4px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+div[bi-label] > div[color-box] {
+    display: block;
+    border-radius: 3px;
+}
+div[bi-label] > div[color-box=very-skilled] {
+    background-color: #df0d0d7a;
+}
+div[bi-label] > div[color-box=productive-experienced] {
+    background-color: #1cdf2c9f;
+}
+div[bi-label] > div[color-box=formerly-productive] {
+    background-color: #dce91061;
+}
+div[bi-label] > div[color-box=still-productive] {
+    background-color: #408dbb8f;
+}
+div[bi-label] > div[color-box=curious] {
+    background-color: #bf7e1d63;
+}
+div[bi-label] > div[color-box=just-productive] {
+    background-color: #3a3a3a63;
+}
+div[bi-label] > div[color-box=unnecessary] {
+    background-color: #fff;
+    border: 1px solid #cdcdcd;
+}
+
+
+table[links] {
+    font-size: 0.9em;
+}
+
+
+
