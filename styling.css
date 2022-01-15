@@ -88,6 +88,10 @@ h3 {
     color: #242424;
 }
 
+a {
+    color: #666;
+}
+
 
 /* ========================================================================= */
 /* TOP HEADER CONTENT */
@@ -109,6 +113,18 @@ body > header > h2 * {
     color: #525252;
 }
 
+body > header > div[tags] {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+body > header > div[tags] > span[label] {
+    padding: 8px;
+    font-size: 1em;
+}
+
 
 /* ========================================================================= */
 /* MAIN ELEMENT */
@@ -118,10 +134,12 @@ main {
     flex-direction: column;
     padding: 12px;
     row-gap: 20px;
+    padding-top: 0;
 }
 
 main > h1 {
-    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #d7d7d7;
 }
 
 main > article[two-cols] {
