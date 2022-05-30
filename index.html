@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styling.css">
 </head>
@@ -26,42 +27,22 @@
     <h1 title>History</h1>
     <article two-cols>
         <div column>
-            <h2 subsection>Current Projects</h1>
-            <section>
-                <h2 title>Subscript <sup>‡</sup></h2>
-                <div tags>
-                    <span label>Note Taking App</span>
-                    <span label>Work In Progress</span>
-                    <span label>2021-present</span>
-                </div>
-                <p description>Subscript is an app that translates your hand drawn notes (VIA an Apple Pencil) into webpages with navigation, where the drawings themselves map to SVG markup.</p>
-                <p description>It's unpublished, but I've already been using this in my classes, especially in chemistry.</p>
-                <p notice>The name 'Subscript' may not be property reserved in the app store and also such may be renamed in the future. If you're interested in evaluating my work, please reach out and I'll be happy to setup a meeting to present my work and technical details therefrom.</p>
-            </section>
             <h2 subsection>Notable Side Projects</h1>
             <section>
                 <h2 title>Imager <sup>†</sup></h2>
                 <div tags>
                     <span label>Automated (Brute Force) Image Compression</span>
-                    <span label>Commercial Failure</span>
                     <span label>2019-2020</span>
                 </div>
                 <p description>Optimizes the compression using ML based metrics (VMAF) in a trial and error manner.</p>
             </section>
             <section>
-                <h2 title>Subscript Markup Language Compiler <sup>✳︎</sup></h2>
-                <p>This was supposed to replace the ah-hoc toolchain I put together for typesetting my old math notes (but now the Sile Typesetter has math support and is obviously more popular). But this was used in an interesting experiment for syntax highlighting (on an iPad IOS app). Most implementations are based on simple patterns, but in here I was playing with custom syntax highlighting based on parsing the source code into an AST which has much more contextual information and therefore I could -for instance- highlight opening and closing braces based on their indentation level.</p>
-                <p>PS: I added a screenshot to the associated README file from the links section.<sup>✳︎</sup></p>
-            </section>
-            <section>
-                <h2 title>SubSystems/chem-bot<sup>✺</sup></h2>
-                <p>When I first took chemistry, things were terrible. I started playing with my own computer algebra system that I wanted to use as the backend for a better scientific calculator. For instance, in one of my OS implementations it could perform (some) algebraic simplifications and furthermore it understood units (implemented the AST and traversals myself)!</p>
-            </section>
-        </div>
-        <div column>
-            <section>
-                <p>It could simplify a product of ㎐ and s into 1, without an ad-hoc rule for the ㎐ symbol itself. Which was likely the problem, it just seemed more elegant to map ㎐ to s−1, and then simplify VIA the CAS. Also played with some other ideas, for instance at a higher level, this project could evaluate "mole(energy(photon(wavelength = nm(325))))" into "J * 3.6808174042676e5", using a plugin-system-like-dsl I invented (how each preceding function was individually implemented).</p>
-                <p>Thereafter, I imagined this as my possible beginning into analog hardware accelerators for the natural sciences VIA the aforementioned CAS that could translate differential equations and other systems into optimized hardware for real value computing.</p>
+                <h2 title>Subscript (iPad note taking app)</h2>
+                <div tags>
+                    <span label>Automated (Brute Force) Image Compression</span>
+                    <span label>2019-2020</span>
+                </div>
+                <p description>With Subscript you can build your own websites with your own hand drawn notes and linkable organization and is optimized for speed without flipping through pages.</p>
             </section>
             <h2 subsection>Notable Jobs</h1>
             <section>
@@ -73,6 +54,8 @@
                 </div>
                 <p>In my first semester at UVU I took CS1400 by professor Bianca Ruiz, who then offered me a grading position at the end of the term.</p>
             </section>
+        </div>
+        <div column>
             <section>
                 <h2 title>Uplynk/VDMS (Verizon Digital Media Services)</h2>
                 <div tags>
@@ -226,40 +209,10 @@
                 <td></td>
             </tr>
             <tr>
-                <td>[‡]</td>
-                <td>My Chemistry 1010 Notes</td>
-                <td><a href="https://content.subscript.app/dev/chemistry-1010---fall-2021/index.html">content.subscript.app/dev/chemistry-1010---fall-2021/index.html</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>[‡]</td>
-                <td>My Electrical Engineering Notes</td>
-                <td><a href="https://content.subscript.app/dev/electrical-engineering/circuit-analysis.html#Overview">content.subscript.app/dev/electrical-engineering/circuit-analysis.html#Overview</a></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td></td>
                 <td>My Beautiful Math Notes</td>
                 <td><a href="https://colbyn.github.io/school-notes-spring-2020/">colbyn.github.io/school-notes-spring-2020/</a></td>
                 <td><small>(This was the forerunner to Subscript.)</small></td>
-            </tr>
-            <tr>
-                <td>[✳︎]</td>
-                <td><small>A WIP LaTeX-like compiler for publishing using web technologies</small></td>
-                <td><a href="https://github.com/subscript-publishing/subscript-compiler">github.com/subscript-publishing/subscript-compiler</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>[✺]</td>
-                <td>My experiments in a computer algebra system, repo 1 (new)</td>
-                <td><a href="https://github.com/colbyn/SubSystems">github.com/colbyn/SubSystems</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>[✺]</td>
-                <td>My experiments in a computer algebra system, repo 2 (original)</td>
-                <td><a href="https://github.com/colbyn/chem-bot">github.com/colbyn/chem-bot</a></td>
-                <td></td>
             </tr>
             <tr>
                 <td></td>

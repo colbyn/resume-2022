@@ -96,33 +96,43 @@ a {
 /* ========================================================================= */
 /* TOP HEADER CONTENT */
 /* ========================================================================= */
-body > header > h1, body > header > h2 {
+header {
+    display: flex;
+    flex-direction: column;
+}
+header > h1, header > h2 {
     text-align: center;
 }
 
-body > header > h1 {
+header > h1 {
     font-weight: 700;
 }
 
-body > header > h2 {
+header > h2 {
     font-weight: 700;
     color: #525252;
 }
 
-body > header > h2 * {
+header > h2 * {
     color: #525252;
 }
 
-body > header > div[tags] {
+header > div[tags] {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     padding: 12px;
+    width: 100%;
 }
 
-body > header > div[tags] > span[label] {
-    padding: 8px;
-    font-size: 1em;
+header > div[tags] {
+
+}
+
+header > div[tags] > span[label] {
+    /* padding: 8px; */
+    /* font-size: 1em; */
+    margin-right: 10px;
 }
 
 
